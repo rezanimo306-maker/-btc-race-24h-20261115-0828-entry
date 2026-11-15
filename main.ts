@@ -38,9 +38,9 @@ const DIP_BPS = 200; // buy when close is >= 2% below the SMA
 const TRAIL_BPS = 80; // trailing stop: sell 0.80% below the run high
 const TP_BPS = 500; // take-profit: sell 5% above the entry price
 
-// Momentum parameters (new in this revision).
+// Momentum parameters (round 3: threshold raised to 175 so it never fires on dev noise — pump insurance only).
 const MOM_K = 30; // velocity lookback: 30 one-minute bars
-const MOM_THRESH_BPS = 100; // buy when close is >= 1% above the close 30 bars ago
+const MOM_THRESH_BPS = 175; // buy when close is >= 1% above the close 30 bars ago
 const MOM_TRAIL_BPS = 50; // tight trailing stop for momentum entries: 0.50%
 const MOM_TP_BPS = 1000; // safety-cap take-profit for momentum entries: +10%
 
